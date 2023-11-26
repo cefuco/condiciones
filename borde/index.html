@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo inicial de la imagen sin borde */
+        img {
+            border: none;
+        }
+    </style>
+    <title>Imagen con Borde</title>
+</head>
+<body>
+
+    <!-- Imagen con el atributo onclick para manejar los clics -->
+    <img id="imagenConBorde" src="BBB1-01-01.png" alt="Imagen" onclick="toggleBorde()">
+
+    <script>
+        // Función para agregar/quitar el borde rojo
+        function toggleBorde() {
+            var imagen = document.getElementById("imagenConBorde");
+
+            // Verificar si la imagen tiene actualmente un borde
+            if (imagen.style.border === "2px solid red") {
+                // Si tiene un borde, quitarlo
+                imagen.style.border = "none";
+            } else {
+                // Si no tiene un borde, agregar uno rojo de 2 pixeles
+                imagen.style.border = "2px solid red";
+            }
+        }
+    </script>
+
+</body>
+</html>

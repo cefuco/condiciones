@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        select {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Verificación de Password</title>
+</head>
+<body>
+    <h2>Ingrese un Password:</h2>
+
+    <select id="select1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <select id="select2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <select id="select3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="verificarPassword()">Ingresar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarPassword() {
+            // Obtener los valores de los select
+            var password1 = document.getElementById("select1").value;
+            var password2 = document.getElementById("select2").value;
+            var password3 = document.getElementById("select3").value;
+
+            // Concatenar los valores para formar el password completo
+            var passwordCompleto = password1 + password2 + password3;
+
+            // Verificar el password
+            if (passwordCompleto === "911") {
+                mostrarResultado("Password 1 correcto");
+            } else if (passwordCompleto === "714") {
+                mostrarResultado("Password 2 correcto");
+            } else {
+                mostrarResultado("Password incorrecto");
+            }
+        }
+
+        function mostrarResultado(mensaje) {
+            // Mostrar el resultado en el párrafo
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+</body>
+</html>
